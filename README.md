@@ -1,7 +1,5 @@
-# Example Plugin
-An example plugin for Bit 2024.1
-
-Please use the MAIN branch for testing with the STABLE version of Bit, the bot MAY error!
+# Welcome Newbies
+A welcomer plugin for Bit 2024.1
 
 ## Folder Structure
 Bit Plugins follow the following folder structure

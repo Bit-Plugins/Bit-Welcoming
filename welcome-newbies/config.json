@@ -1,0 +1,10 @@
+{
+    "channels": {
+        "welcome": {
+            "guildID": {
+                "message": "Welcome to {serverName}, {userMention}",
+                "channel": "channelID"
+            }
+        }
+    }
+}
