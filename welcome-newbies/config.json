@@ -2,7 +2,7 @@
     "channels": {
         "welcome": {
             "guildID": {
-                "message": "Welcome to {serverName}, {userMention}",
+                "message": "Welcome to {guildName}, {userMention}",
                 "channel": "channelID"
             }
         }
