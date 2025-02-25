@@ -1,5 +1,5 @@
 # Welcome Newbies
-A welcomer plugin for Bit 2024.1
+A welcomer plugin for Bit 2025.1
 
 ## Folder Structure
 Bit Plugins follow the following folder structure
