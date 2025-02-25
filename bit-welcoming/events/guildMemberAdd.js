@@ -1,5 +1,6 @@
 const { EmbedBuilder, AttachmentBuilder } = require('discord.js');
-const config = require('../config.json');
+const config = require('../../../configs/bit-welcoming/config.json');
+const core = require('bit/core');
 
 module.exports = {
     name: 'guildMemberAdd',
@@ -7,9 +8,13 @@ module.exports = {
 		if(config.welcome[member.guild.id]) {
 			const welcome = config.welcome[member.guild.id]
 			if(welcome.channel) {
-				member.guild.channels.cache.get(welcome.channel).send({ content: welcome.message.replace('{guildName}', member.guild.name).replace('{userMention}', '<@'+member.user.id+'>')})
+				if(welcome.message) {
+					member.guild.channels.cache.get(welcome.channel).send({ content: welcome.message.replace('{guildName}', member.guild.name).replace('{userMention}', '<@'+member.user.id+'>')})
+				} else {
+					core.log(1, "Bit: Welcoming", false, "Guild "+member.guild.id+" does not have a message set!")
+				}
 			} else {
-				console.log("Guild "+member.guild.id+" does not have a channel set")
+				core.log(1, "Bit: Welcoming", false, "Guild "+member.guild.id+" does not have a channel set!")
 			}
 		}
     }
