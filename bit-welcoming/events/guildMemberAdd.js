@@ -5,8 +5,9 @@ const core = require('bit/core');
 module.exports = {
     name: 'guildMemberAdd',
     async execute(member) {
-		if(config.welcome[member.guild.id]) {
-			const welcome = config.welcome[member.guild.id]
+		if(config.channels.welcome[member.guild.id]) {
+			const welcome = config.channels.welcome[member.guild.id]
+			
 			if(welcome.channel) {
 				if(welcome.message) {
 					member.guild.channels.cache.get(welcome.channel).send({ content: welcome.message.replace('{guildName}', member.guild.name).replace('{userMention}', '<@'+member.user.id+'>')})

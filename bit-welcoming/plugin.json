@@ -2,7 +2,7 @@
     "name": "Bit: Welcoming",
     "id": "bit-welcoming",
     "developer": "Lockyz Media",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "support": "https://github.com/Bit-Plugins/bit-welcoming/issues",
     "update_url": "https://cdn.lockyzdev.net/discord/bots/bit/plugins/bit-welcoming/update.json",
     "events": true,
