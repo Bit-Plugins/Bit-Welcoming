@@ -1,9 +1,9 @@
-const { EmbedBuilder, AttachmentBuilder } = require('discord.js');
+const { EmbedBuilder, AttachmentBuilder, Events } = require('discord.js');
 const config = require('../../../configs/bit-welcoming/config.json');
 const core = require('bit/core');
 
 module.exports = {
-    name: 'guildMemberAdd',
+    name: Events.GuildMemberAdd,
     async execute(member) {
 		if(config.channels.welcome[member.guild.id]) {
 			const welcome = config.channels.welcome[member.guild.id]
@@ -20,7 +20,7 @@ module.exports = {
 
 			if(config.channels.welcome[guild.id].roleOnJoin === true) {
 				if(guild.roles.cache.get(config.channels.welcome[guild.id].role)) {
-					if(config.channels.welcome[guild.id].discordVerification === false) {
+					if(member.pending === false) {
 						message.member.roles.add(config.channels.welcome[guild.id].role, 'User Joined')
 					}
 				}
