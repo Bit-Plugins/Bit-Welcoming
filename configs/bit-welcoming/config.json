@@ -5,8 +5,7 @@
                 "message": "Welcome to {guildName}, {userMention}",
                 "channel": "channelID",
                 "roleOnJoin": false,
-                "memberRole": "roleID",
-                "discordVerification": true
+                "memberRole": "roleID"
             }
         }
     }
